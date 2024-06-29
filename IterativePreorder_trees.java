@@ -20,15 +20,18 @@ class BinaryTree{
     }
 
     void printPreOrder(Node node){
-        Stack<Node> stack = new Stack<>();
-        stack.push(node); //push root
+        if (node==null) System.out.println("Tree root is null");
+        else{
+            Stack<Node> stack = new Stack<>();
+            stack.push(node); //push root
 
-        while(!stack.isEmpty()){
-            Node tempNode = stack.pop(); //delete the top in tree
-            System.out.print(tempNode.data+" "); //first root gets printed
+            while(!stack.isEmpty()){
+                Node tempNode = stack.pop(); //delete the top in tree
+                System.out.print(tempNode.data+" "); //first root gets printed
 
-            if (tempNode.right != null) stack.push(tempNode.right); //push right
-            if (tempNode.left != null) stack.push(tempNode.left); //push left at last so that it comes out before right
+                if (tempNode.right != null) stack.push(tempNode.right); //push right
+                if (tempNode.left != null) stack.push(tempNode.left); //push left at last so that it comes out before right
+            }
         }
     }
 }
