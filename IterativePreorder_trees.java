@@ -56,3 +56,6 @@ public class IterativePreorder_trees {
 //Output :
 
 // 50 25 12 37 30 40 75 62 60 70 57
+
+//time complexity : O(N)
+//space complexity : O(N)
