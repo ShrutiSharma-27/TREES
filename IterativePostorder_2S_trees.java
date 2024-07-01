@@ -65,3 +65,6 @@ public class IterativePostorder_2S_trees {
 //Output :
 
 // 12 30 40 37 25 60 70 62 57 75 50
+
+//time complexity : O(N)
+//space complexity : O(2N)
