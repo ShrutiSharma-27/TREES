@@ -1,3 +1,5 @@
+// The height of the tree is the number of nodes present on the longest path from the root to the deepest node of the tree.
+
 class TreeNode{
     int val;
     TreeNode left;
