@@ -1,3 +1,5 @@
+//Balanced Tree : for every node abs(left height - right height) <= 1
+
 class TreeNode{
     int val;
     TreeNode left;
