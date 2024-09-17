@@ -18,18 +18,11 @@ class TreeNode{
 
 public class Maximum_path_sum {
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(3);
-        root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(-5);
-        root.left.right.left = new TreeNode(-6);
-        root.left.right.right = new TreeNode(7);
-        root.right.right = new TreeNode(8);
-        root.right.right.right = new TreeNode(9);
-        root.right.right.right.left = new TreeNode(-10);
-        root.right.right.right.right = new TreeNode(11);
-        root.right.right.right.left.right = new TreeNode(12);
+        TreeNode root = new TreeNode(15);
+        root.left = new TreeNode(10);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(-30);
+        root.right.right = new TreeNode(-15);
 
         int[] maxSum = new int[1];
 
@@ -39,18 +32,18 @@ public class Maximum_path_sum {
 
     public static int getMaxSum(TreeNode root, int[] maxi){
         if(root==null) return 0;
-        int lh = getMaxSum(root.left, maxi); //taking left height
-        int rh = getMaxSum(root.right, maxi); //taking right height
+        int lh = Math.max(0,getMaxSum(root.left, maxi)); //taking max sum from left
+        int rh = Math.max(0,getMaxSum(root.right, maxi)); //taking max sum from right
 
         maxi[0] = Math.max(maxi[0],lh+rh+root.val);
 
-        return root.val + Math.max(lh,rh); // returning max height to lh and rh variable
+        return root.val + Math.max(lh,rh);
     }
 }
 
 // Output :
 
-// 38
+// 45
 
 //time complexity : O(N)
 //space complexity : O(N)
