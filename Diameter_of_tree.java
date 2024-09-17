@@ -23,9 +23,15 @@ public class Diameter_of_tree {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
-        root.right.left = new TreeNode(4);
-        root.right.right = new TreeNode(6);
-        root.right.left.left = new TreeNode(5);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
+        root.left.right.left = new TreeNode(6);
+        root.left.right.right = new TreeNode(7);
+        root.right.right = new TreeNode(8);
+        root.right.right.right = new TreeNode(9);
+        root.right.right.right.left = new TreeNode(10);
+        root.right.right.right.right = new TreeNode(11);
+        root.right.right.right.left.right = new TreeNode(12);
 
         int[] diameter = new int[1];
 
@@ -46,7 +52,7 @@ public class Diameter_of_tree {
 
 // Output :
 
-// 5
+// 9
 
 //Time complexity : O(N)
 //Space complexity : O(N)
