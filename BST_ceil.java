@@ -39,8 +39,8 @@ public class BST_ceil {
         int ceil=-1;
         while(q != null){
             if(q.val==key){
-                ceil=q.val;
-                return q.val;
+                ceil=q.val; // not necessary to assign as you can directly return q.val
+                return ceil;
             }
             if(q.val<key) q=q.right;
             else{
